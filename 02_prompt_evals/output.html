@@ -1,0 +1,213 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">2</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">9.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a dense academic passage containing implicit vs. explicit topics, where some topics are stated directly while others must be inferred from context and methodology descriptions, to ensure the prompt captures both obvious and subtle subject matter</td>
+                <td class="prompt-inputs"><strong>content:</strong> This study employs a mixed-methods approach combining quantitative transcriptomic analysis with qualitative phenomenological interviews to investigate the epigenetic mechanisms underlying treatment-resistant depression in adolescent populations. We utilized whole-genome bisulfite sequencing to identify DNA methylation patterns in the prefrontal cortex and hippocampus, regions implicated in mood regulation and cognitive processing. Our cohort comprised 147 participants stratified by treatment response status, with differential methylation analysis revealing significant alterations in genes associated with synaptic plasticity and inflammatory signaling pathways. Semi-structured interviews revealed that patients exhibiting atypical methylation profiles reported distinct symptom trajectories and medication response patterns, suggesting biological heterogeneity within the diagnostic category. These findings integrate molecular neurobiology with patient-centered outcomes, highlighting the intersection of genetic predisposition, environmental stressors, and neurobiological adaptation in treatment resistance.</td>
+                <td class="criteria">• Captures both explicitly stated topics (epigenetics, transcriptomics, depression, adolescents) and implicitly referenced topics derived from methodology (DNA methylation, prefrontal cortex, synaptic plasticity, inflammatory signaling)<br>• Distinguishes between primary research focus and supporting scientific domains<br>• Includes topics identifiable from technical procedures and biological mechanisms described in the passage</td>
+                <td class="output"><pre>```json
+[
+  "Treatment-resistant depression",
+  "Adolescent psychiatry",
+  "Epigenetics",
+  "DNA methylation",
+  "Transcriptomics",
+  "Whole-genome bisulfite sequencing",
+  "Prefrontal cortex",
+  "Hippocampus",
+  "Mood regulation",
+  "Cognitive processing",
+  "Synaptic plasticity",
+  "Inflammatory signaling pathways",
+  "Phenomenological interviews",
+  "Mixed-methods research",
+  "Treatment response",
+  "Medication response patterns",
+  "Molecular neurobiology",
+  "Patient-centered outcomes",
+  "Genetic predisposition",
+  "Environmental stressors",
+  "Neurobiological adaptation",
+  "Biological heterogeneity"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings containing topics from the article, with no extra commentary, and nothing but the JSON array is provided. Regarding secondary criteria, the solution excellently captures both explicitly stated topics and implicitly referenced ones from methodology and biological mechanisms. It appropriately distinguishes primary research focus from supporting domains. The only minor issue is 'Adolescent psychiatry' which represents a slight interpretive leap beyond what the text explicitly states (it mentions 'adolescent populations' but doesn't frame this as a psychiatric specialty). The solution is comprehensive and well-organized, meeting the stated evaluation criteria effectively.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a passage containing interdisciplinary topics that span multiple domains (e.g., a neuroscience study discussing psychology, biology, and computational modeling) to verify the prompt correctly identifies and separates topics across different fields</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent advances in cognitive neuroscience have leveraged computational modeling to understand synaptic plasticity mechanisms underlying learning and memory formation. Using artificial neural networks trained with backpropagation algorithms, researchers simulated hippocampal circuits and discovered that dopamine-regulated long-term potentiation exhibits dynamics consistent with reinforcement learning theory from behavioral psychology. Neuroimaging studies employing functional MRI correlated these computational predictions with human brain activation patterns during declarative memory tasks, while molecular biology techniques identified specific CREB phosphorylation cascades that mediate the transition from short-term to long-term memory consolidation. This integrative approach combining systems neuroscience, mathematical modeling, behavioral analysis, and molecular biology provides unprecedented insights into how neural substrates implement learning algorithms.</td>
+                <td class="criteria">• Extracts topics spanning at least three distinct domains (e.g., neuroscience, psychology, computational science, molecular biology)<br>• Returns results as a JSON array of strings with no extraneous fields or formatting<br>• Identifies both explicit topics (e.g., 'synaptic plasticity', 'dopamine') and domain-level topics (e.g., 'computational modeling', 'neuroimaging')</td>
+                <td class="output"><pre>```json
+[
+  "Cognitive Neuroscience",
+  "Computational Modeling",
+  "Synaptic Plasticity",
+  "Learning and Memory",
+  "Artificial Neural Networks",
+  "Backpropagation Algorithms",
+  "Hippocampal Circuits",
+  "Dopamine",
+  "Long-term Potentiation",
+  "Reinforcement Learning",
+  "Behavioral Psychology",
+  "Functional MRI",
+  "Neuroimaging",
+  "Declarative Memory",
+  "Molecular Biology",
+  "CREB Phosphorylation",
+  "Short-term Memory",
+  "Long-term Memory Consolidation",
+  "Systems Neuroscience",
+  "Mathematical Modeling",
+  "Behavioral Analysis"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage, with no extraneous commentary or formatting. It meets all secondary criteria by spanning at least four distinct domains (neuroscience, computational science, psychology, molecular biology) and identifying both explicit technical topics and broader domain-level topics. The extraction is thorough and well-organized. The only minor issue is the inclusion of 'Behavioral Analysis' which is somewhat inferential rather than explicitly stated as a distinct topic, though this is a very minor concern that does not significantly detract from the overall quality of the response.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

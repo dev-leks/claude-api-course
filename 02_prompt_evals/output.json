@@ -1,0 +1,36 @@
+[
+  {
+    "output": "```json\n[\n  \"Treatment-resistant depression\",\n  \"Adolescent psychiatry\",\n  \"Epigenetics\",\n  \"DNA methylation\",\n  \"Transcriptomics\",\n  \"Whole-genome bisulfite sequencing\",\n  \"Prefrontal cortex\",\n  \"Hippocampus\",\n  \"Mood regulation\",\n  \"Cognitive processing\",\n  \"Synaptic plasticity\",\n  \"Inflammatory signaling pathways\",\n  \"Phenomenological interviews\",\n  \"Mixed-methods research\",\n  \"Treatment response\",\n  \"Medication response patterns\",\n  \"Molecular neurobiology\",\n  \"Patient-centered outcomes\",\n  \"Genetic predisposition\",\n  \"Environmental stressors\",\n  \"Neurobiological adaptation\",\n  \"Biological heterogeneity\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study employs a mixed-methods approach combining quantitative transcriptomic analysis with qualitative phenomenological interviews to investigate the epigenetic mechanisms underlying treatment-resistant depression in adolescent populations. We utilized whole-genome bisulfite sequencing to identify DNA methylation patterns in the prefrontal cortex and hippocampus, regions implicated in mood regulation and cognitive processing. Our cohort comprised 147 participants stratified by treatment response status, with differential methylation analysis revealing significant alterations in genes associated with synaptic plasticity and inflammatory signaling pathways. Semi-structured interviews revealed that patients exhibiting atypical methylation profiles reported distinct symptom trajectories and medication response patterns, suggesting biological heterogeneity within the diagnostic category. These findings integrate molecular neurobiology with patient-centered outcomes, highlighting the intersection of genetic predisposition, environmental stressors, and neurobiological adaptation in treatment resistance."
+      },
+      "solution_criteria": [
+        "Captures both explicitly stated topics (epigenetics, transcriptomics, depression, adolescents) and implicitly referenced topics derived from methodology (DNA methylation, prefrontal cortex, synaptic plasticity, inflammatory signaling)",
+        "Distinguishes between primary research focus and supporting scientific domains",
+        "Includes topics identifiable from technical procedures and biological mechanisms described in the passage"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a dense academic passage containing implicit vs. explicit topics, where some topics are stated directly while others must be inferred from context and methodology descriptions, to ensure the prompt captures both obvious and subtle subject matter"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it is a valid JSON array of strings containing topics from the article, with no extra commentary, and nothing but the JSON array is provided. Regarding secondary criteria, the solution excellently captures both explicitly stated topics and implicitly referenced ones from methodology and biological mechanisms. It appropriately distinguishes primary research focus from supporting domains. The only minor issue is 'Adolescent psychiatry' which represents a slight interpretive leap beyond what the text explicitly states (it mentions 'adolescent populations' but doesn't frame this as a psychiatric specialty). The solution is comprehensive and well-organized, meeting the stated evaluation criteria effectively."
+  },
+  {
+    "output": "```json\n[\n  \"Cognitive Neuroscience\",\n  \"Computational Modeling\",\n  \"Synaptic Plasticity\",\n  \"Learning and Memory\",\n  \"Artificial Neural Networks\",\n  \"Backpropagation Algorithms\",\n  \"Hippocampal Circuits\",\n  \"Dopamine\",\n  \"Long-term Potentiation\",\n  \"Reinforcement Learning\",\n  \"Behavioral Psychology\",\n  \"Functional MRI\",\n  \"Neuroimaging\",\n  \"Declarative Memory\",\n  \"Molecular Biology\",\n  \"CREB Phosphorylation\",\n  \"Short-term Memory\",\n  \"Long-term Memory Consolidation\",\n  \"Systems Neuroscience\",\n  \"Mathematical Modeling\",\n  \"Behavioral Analysis\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in cognitive neuroscience have leveraged computational modeling to understand synaptic plasticity mechanisms underlying learning and memory formation. Using artificial neural networks trained with backpropagation algorithms, researchers simulated hippocampal circuits and discovered that dopamine-regulated long-term potentiation exhibits dynamics consistent with reinforcement learning theory from behavioral psychology. Neuroimaging studies employing functional MRI correlated these computational predictions with human brain activation patterns during declarative memory tasks, while molecular biology techniques identified specific CREB phosphorylation cascades that mediate the transition from short-term to long-term memory consolidation. This integrative approach combining systems neuroscience, mathematical modeling, behavioral analysis, and molecular biology provides unprecedented insights into how neural substrates implement learning algorithms."
+      },
+      "solution_criteria": [
+        "Extracts topics spanning at least three distinct domains (e.g., neuroscience, psychology, computational science, molecular biology)",
+        "Returns results as a JSON array of strings with no extraneous fields or formatting",
+        "Identifies both explicit topics (e.g., 'synaptic plasticity', 'dopamine') and domain-level topics (e.g., 'computational modeling', 'neuroimaging')"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage containing interdisciplinary topics that span multiple domains (e.g., a neuroscience study discussing psychology, biology, and computational modeling) to verify the prompt correctly identifies and separates topics across different fields"
+    },
+    "score": 9,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage, with no extraneous commentary or formatting. It meets all secondary criteria by spanning at least four distinct domains (neuroscience, computational science, psychology, molecular biology) and identifying both explicit technical topics and broader domain-level topics. The extraction is thorough and well-organized. The only minor issue is the inclusion of 'Behavioral Analysis' which is somewhat inferential rather than explicitly stated as a distinct topic, though this is a very minor concern that does not significantly detract from the overall quality of the response."
+  }
+]
