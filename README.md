@@ -11,6 +11,7 @@ A Jupyter-notebook-based course covering the Anthropic Claude API from fundament
 | `03_tool_use/` | Tool use / function calling |
 | `04_rag/` | Chunking, embeddings, vector search, BM25, hybrid retrieval |
 | `05_features/` | Extended thinking, image inputs, prompt caching, code execution |
+| `06_mcp/` | MCP (Model Context Protocol) — building an MCP server and client CLI app |
 
 ## Setup
 

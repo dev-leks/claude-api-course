@@ -11,6 +11,7 @@ This is a Jupyter-notebook-based course teaching the Anthropic Claude API, organ
 - `03_tool_use/` — Tool use / function calling
 - `04_rag/` — Retrieval-Augmented Generation (chunking, embeddings, vector search, BM25, hybrid retrieval)
 - `05_features/` — Extended thinking, image inputs, prompt caching, code execution
+- `06_mcp/` — MCP (Model Context Protocol): building an MCP server and interactive CLI client
 
 ## Commands
 
