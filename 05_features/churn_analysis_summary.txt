@@ -1,0 +1,75 @@
+====================================================================================================
+EXECUTIVE SUMMARY: MAJOR DRIVERS OF CUSTOMER CHURN
+====================================================================================================
+
+📈 OVERVIEW
+----------------------------------------------------------------------------------------------------
+  • Total Customers Analyzed: 500
+  • Churned Customers: 193 (38.6%)
+  • Retained Customers: 307 (61.4%)
+
+🎯 TOP 5 CHURN DRIVERS (Ranked by Importance)
+----------------------------------------------------------------------------------------------------
+
+1. ⏱️  TOTAL VIEWING HOURS (Importance: 23.6%)
+   → Churned customers: 66.6 hours/month
+   → Retained customers: 83.2 hours/month
+   → Difference: 16.6 LESS (20.0% lower)
+   💡 Action: Focus on low-engagement customers (<70 hrs/month)
+
+2. ⌚ AVERAGE SESSION DURATION (Importance: 19.8%)
+   → Churned customers: 49.4 minutes per session
+   → Retained customers: 57.8 minutes per session
+   → Difference: 8.3 LESS (14.4% lower)
+   💡 Action: Improve content engagement to increase session length
+
+3. 🎬 UNIQUE TITLES WATCHED (Importance: 16.1%)
+   → Churned customers: 19.5 unique titles/month
+   → Retained customers: 23.7 unique titles/month
+   → Difference: 4.3 LESS (18.1% lower)
+   💡 Action: Enhance recommendation algorithms
+
+4. 📺 BINGE WATCHING SESSIONS (Importance: 11.5%)
+   → Churned customers: 6.2 binge sessions/month
+   → Retained customers: 7.7 binge sessions/month
+   → Difference: 1.5 LESS (19.7% lower)
+   💡 Action: Promote serialized content and auto-play features
+
+5. 🆘 CUSTOMER SERVICE INTERACTIONS (Importance: 10.9%)
+   → Churned customers: 3.2 interactions/year
+   → Retained customers: 2.5 interactions/year
+   → Difference: 0.7 MORE (27.7% higher)
+   💡 Action: Proactive outreach for customers with 3+ interactions
+
+
+🔍 ADDITIONAL INSIGHTS
+----------------------------------------------------------------------------------------------------
+
+📊 Subscription Tier Impact:
+   • Basic: 43.5% churn rate (90/207 customers)
+   • Standard: 39.5% churn rate (83/210 customers)
+   • Premium: 24.1% churn rate (20/83 customers)
+
+🎭 Genre Preferences:
+   Highest Risk: Horror (52.3%)
+   Lowest Risk: Documentary (25.9%)
+
+
+💼 STRATEGIC RECOMMENDATIONS
+----------------------------------------------------------------------------------------------------
+
+1. 🎯 IMMEDIATE ACTIONS:
+   • Create early warning system for customers with <70 viewing hours/month
+   • Flag customers with 3+ customer service interactions for retention campaigns
+   • Focus on Basic tier customers (43.5% churn rate)
+
+2. 📈 ENGAGEMENT STRATEGIES:
+   • Develop personalized content recommendations to increase unique titles watched
+   • Implement features that encourage longer viewing sessions
+   • Promote binge-worthy series to increase session frequency
+
+3. 🔧 OPERATIONAL IMPROVEMENTS:
+   • Improve customer service quality to reduce repeat interactions
+   • Implement proactive outreach for at-risk customer segments
+
+====================================================================================================
